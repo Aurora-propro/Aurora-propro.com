@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurora - Premium Web Creation Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0f0f1e;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        
+        /* Header with gradient */
+        header {
+            background: linear-gradient(135deg, #2563eb 0%, #8b5cf6 50%, #d946ef 100%);
+            padding: 20px 0;
+            box-shadow: 0 10px 40px rgba(139, 92, 246, 0.3);
+            position: relative;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        
+        /* Logo with waterdrop */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 28px;
+            font-weight: bold;
+            animation: floatLogo 3s ease-in-out infinite;
+        }
+        
+        .waterdrop {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .waterdrop svg {
+            width: 100%;
+            height: 100%;
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+        }
+        
+        @keyframes floatLogo {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        nav ul {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: white;
+            transition: width 0.3s ease;
+        }
+        
+        nav a:hover::after {
+            width: 100%;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, #0f0f1e 0%, #1a0f2e 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -50%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, transparent 70%);
+            animation: float 8s ease-in-out infinite reverse;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 40px;
+        }
+        
+        .hero h1 {
+            font-size: 72px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #60a5fa 0%, #c084fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: slideInDown 1s ease-out;
+        }
+        
+        .hero .animated-text {
+            display: inline-block;
+            font-size: 48px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            height: 60px;
+        }
+        
+        .word {
+            display: inline-block;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+            margin-right: 10px;
+        }
+        
+        .word:nth-child(1) { animation-delay: 0s; }
+        .word:nth-child(2) { animation-delay: 0.2s; }
+        .word:nth-child(3) { animation-delay: 0.4s; }
+        .word:nth-child(4) { animation-delay: 0.6s; }
+        .word:nth-child(5) { animation-delay: 0.8s; }
+        
+        .hero p {
+            font-size: 20px;
+            color: #94a3b8;
+            margin-bottom: 40px;
+            animation: slideInUp 1s ease-out 0.5s forwards;
+            opacity: 0;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #2563eb 0%, #8b5cf6 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
+            animation: slideInUp 1s ease-out 0.7s forwards;
+            opacity: 0;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(139, 92, 246, 0.5);
+        }
+        
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(20px); }
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 100px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .services h2 {
+            font-size: 48px;
+            margin-bottom: 60px;
+            background: linear-gradient(135deg, #60a5fa 0%, #c084fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+            padding: 40px 20px;
+            border-radius: 15px;
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(139, 92, 246, 0.6);
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.2);
+        }
+        
+        .service-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        
+        .service-card p {
+            color: #94a3b8;
+            font-size: 14px;
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #0f0f1e 0%, #1a0f2e 100%);
+            padding: 40px;
+            text-align: center;
+            border-top: 1px solid rgba(139, 92, 246, 0.2);
+        }
+        
+        footer p {
+            color: #64748b;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 48px;
+            }
+            
+            nav ul {
+                gap: 20px;
+            }
+            
+            nav {
+                padding: 0 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <div class="waterdrop">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M50 10 C 50 10, 30 40, 30 55 C 30 72.67, 39.05 85, 50 85 C 60.95 85, 70 72.67, 70 55 C 70 40, 50 10, 50 10 Z" 
+                              fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                Aurora
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Aurora</h1>
+            <div class="animated-text">
+                <span class="word">Transform</span>
+                <span class="word">Your</span>
+                <span class="word">Digital</span>
+                <span class="word">Dreams</span>
+                <span class="word">Today</span>
+            </div>
+            <p>Stunning, lightning-fast websites tailored to your vision</p>
+            <a href="#services" class="cta-button">Explore Services</a>
+        </div>
+    </section>
+    
+    <section class="services" id="services">
+        <h2>What We Offer</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Web Design</h3>
+                <p>Beautiful, responsive designs that captivate your audience</p>
+            </div>
+            <div class="service-card">
+                <h3>Development</h3>
+                <p>Robust, scalable solutions built with cutting-edge technology</p>
+            </div>
+            <div class="service-card">
+                <h3>Optimization</h3>
+                <p>Lightning-fast performance and SEO-ready websites</p>
+            </div>
+            <div class="service-card">
+                <h3>Animation</h3>
+                <p>Smooth, engaging animations that bring your site to life</p>
+            </div>
+            <div class="service-card">
+                <h3>Support</h3>
+                <p>24/7 assistance to keep your site running perfectly</p>
+            </div>
+            <div class="service-card">
+                <h3>Strategy</h3>
+                <p>Expert guidance to achieve your digital goals</p>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Aurora. All rights reserved.</p>
+    </footer>
+</body>
+</html>
