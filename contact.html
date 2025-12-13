@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Aurora</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0f0f1e;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Header with gradient */
+        header {
+            background: linear-gradient(135deg, #2563eb 0%, #8b5cf6 50%, #d946ef 100%);
+            padding: 20px 0;
+            box-shadow: 0 10px 40px rgba(139, 92, 246, 0.3);
+            position: relative;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 28px;
+            font-weight: bold;
+            animation: floatLogo 3s ease-in-out infinite;
+        }
+
+        .waterdrop {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .waterdrop svg {
+            width: 100%;
+            height: 100%;
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+        }
+
+        @keyframes floatLogo {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        nav ul {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: white;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #0f0f1e 0%, #1a0f2e 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .contact-section::after {
+            content: '';
+            position: absolute;
+            bottom: -50%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, transparent 70%);
+            animation: float 8s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(20px); }
+        }
+
+        .contact-container {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            width: 100%;
+        }
+
+        .contact-container h1 {
+            font-size: 64px;
+            font-weight: 900;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, #60a5fa 0%, #c084fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: slideInDown 1s ease-out;
+        }
+
+        .contact-container p {
+            font-size: 18px;
+            color: #94a3b8;
+            margin-bottom: 50px;
+            animation: slideInUp 1s ease-out 0.2s forwards;
+            opacity: 0;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+            padding: 40px;
+            border-radius: 15px;
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            margin-bottom: 30px;
+            animation: slideInUp 1s ease-out 0.4s forwards;
+            opacity: 0;
+        }
+
+        .contact-info h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #60a5fa;
+        }
+
+        .contact-method {
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .contact-method-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #2563eb 0%, #8b5cf6 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .contact-method-content h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .contact-method-content p {
+            color: #94a3b8;
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .contact-method a {
+            color: #60a5fa;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .contact-method a:hover {
+            color: #c084fc;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #2563eb 0%, #8b5cf6 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
+            animation: slideInUp 1s ease-out 0.6s forwards;
+            opacity: 0;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(139, 92, 246, 0.5);
+        }
+
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #0f0f1e 0%, #1a0f2e 100%);
+            padding: 40px;
+            text-align: center;
+            border-top: 1px solid rgba(139, 92, 246, 0.2);
+        }
+
+        footer p {
+            color: #64748b;
+        }
+
+        @media (max-width: 768px) {
+            .contact-container h1 {
+                font-size: 48px;
+            }
+
+            nav ul {
+                gap: 20px;
+            }
+
+            nav {
+                padding: 0 20px;
+            }
+
+            .contact-info {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <div class="waterdrop">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M50 10 C 50 10, 30 40, 30 55 C 30 72.67, 39.05 85, 50 85 C 60.95 85, 70 72.67, 70 55 C 70 40, 50 10, 50 10 Z"
+                            fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                Aurora
+            </div>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact-section">
+        <div class="contact-container">
+            <h1>Get in Touch</h1>
+            <p>Have a question or want to start a project? We'd love to hear from you!</p>
+
+            <div class="contact-info">
+                <h2>Contact Methods</h2>
+
+                <div class="contact-method">
+                    <div class="contact-method-icon">📱</div>
+                    <div class="contact-method-content">
+                        <h3>WhatsApp</h3>
+                        <p><a href="https://wa.me/85254002849">852+ 5400 2849</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-method">
+                    <div class="contact-method-icon">💬</div>
+                    <div class="contact-method-content">
+                        <h3>Discord</h3>
+                        <p><a href="#">Neelproro2</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <a href="https://wa.me/85254002849" class="cta-button">Message on WhatsApp</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Aurora. All rights reserved.</p>
+    </footer>
+</body>
+</html>
