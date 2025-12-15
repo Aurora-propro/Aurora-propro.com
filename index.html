@@ -10,22 +10,18 @@
       padding: 0;
       box-sizing: border-box;
     }
-
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: #0f0f1e;
       color: #fff;
       overflow-x: hidden;
     }
-
-    /* Header with gradient */
     header {
       background: linear-gradient(135deg, #2563eb 0%, #8b5cf6 50%, #d946ef 100%);
       padding: 20px 0;
       box-shadow: 0 10px 40px rgba(139, 92, 246, 0.3);
       position: relative;
     }
-
     nav {
       display: flex;
       justify-content: space-between;
@@ -34,8 +30,6 @@
       margin: 0 auto;
       padding: 0 40px;
     }
-
-    /* Logo with waterdrop */
     .logo {
       display: flex;
       align-items: center;
@@ -44,7 +38,6 @@
       font-weight: bold;
       animation: floatLogo 3s ease-in-out infinite;
     }
-
     .waterdrop {
       width: 40px;
       height: 40px;
@@ -52,24 +45,20 @@
       align-items: center;
       justify-content: center;
     }
-
     .waterdrop svg {
       width: 100%;
       height: 100%;
       filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
     }
-
     @keyframes floatLogo {
       0%, 100% { transform: translateY(0px); }
       50% { transform: translateY(-10px); }
     }
-
     nav ul {
       display: flex;
       gap: 40px;
       list-style: none;
     }
-
     nav a {
       color: white;
       text-decoration: none;
@@ -77,7 +66,6 @@
       transition: all 0.3s ease;
       position: relative;
     }
-
     nav a::after {
       content: '';
       position: absolute;
@@ -88,12 +76,9 @@
       background: white;
       transition: width 0.3s ease;
     }
-
     nav a:hover::after {
       width: 100%;
     }
-
-    /* Language switcher */
     #languageSwitcher {
       background: rgba(15, 23, 42, 0.6);
       color: #e5e7eb;
@@ -104,13 +89,10 @@
       outline: none;
       cursor: pointer;
     }
-
     #languageSwitcher:focus {
       border-color: #c4b5fd;
       box-shadow: 0 0 0 1px rgba(196, 181, 253, 0.6);
     }
-
-    /* Hero Section */
     .hero {
       min-height: 100vh;
       display: flex;
@@ -121,7 +103,6 @@
       position: relative;
       overflow: hidden;
     }
-
     .hero::before {
       content: '';
       position: absolute;
@@ -133,7 +114,6 @@
       background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
       animation: float 6s ease-in-out infinite;
     }
-
     .hero::after {
       content: '';
       position: absolute;
@@ -145,14 +125,12 @@
       background: radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, transparent 70%);
       animation: float 8s ease-in-out infinite reverse;
     }
-
     .hero-content {
       position: relative;
       z-index: 2;
       max-width: 800px;
       padding: 40px;
     }
-
     .hero h1 {
       font-size: 72px;
       font-weight: 900;
@@ -163,7 +141,6 @@
       background-clip: text;
       animation: slideInDown 1s ease-out;
     }
-
     .hero .animated-text {
       display: inline-block;
       font-size: 48px;
@@ -171,20 +148,17 @@
       margin-bottom: 30px;
       height: 60px;
     }
-
     .word {
       display: inline-block;
       opacity: 0;
       animation: fadeInUp 0.8s ease-out forwards;
       margin-right: 10px;
     }
-
     .word:nth-child(1) { animation-delay: 0s; }
     .word:nth-child(2) { animation-delay: 0.2s; }
     .word:nth-child(3) { animation-delay: 0.4s; }
     .word:nth-child(4) { animation-delay: 0.6s; }
     .word:nth-child(5) { animation-delay: 0.8s; }
-
     .hero p {
       font-size: 20px;
       color: #94a3b8;
@@ -192,7 +166,6 @@
       animation: slideInUp 1s ease-out 0.5s forwards;
       opacity: 0;
     }
-
     .cta-button {
       display: inline-block;
       padding: 15px 40px;
@@ -207,40 +180,32 @@
       animation: slideInUp 1s ease-out 0.7s forwards;
       opacity: 0;
     }
-
     .cta-button:hover {
       transform: translateY(-5px);
       box-shadow: 0 15px 40px rgba(139, 92, 246, 0.5);
     }
-
     @keyframes slideInDown {
       from { opacity: 0; transform: translateY(-30px); }
       to { opacity: 1; transform: translateY(0); }
     }
-
     @keyframes slideInUp {
       from { opacity: 0; transform: translateY(30px); }
       to { opacity: 1; transform: translateY(0); }
     }
-
     @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-
     @keyframes float {
       0%, 100% { transform: translateY(0px); }
       50% { transform: translateY(20px); }
     }
-
-    /* Services / Examples / Testimonials Section */
     .services {
       padding: 100px 40px;
       max-width: 1200px;
       margin: 0 auto;
       text-align: center;
     }
-
     .services h2 {
       font-size: 48px;
       margin-bottom: 60px;
@@ -249,13 +214,11 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 30px;
     }
-
     .service-card {
       background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
       padding: 40px 20px;
@@ -263,56 +226,137 @@
       border: 1px solid rgba(139, 92, 246, 0.3);
       transition: all 0.3s ease;
     }
-
     .service-card:hover {
       transform: translateY(-10px);
       border-color: rgba(139, 92, 246, 0.6);
       box-shadow: 0 10px 30px rgba(139, 92, 246, 0.2);
     }
-
     .service-card h3 {
       font-size: 24px;
       margin-bottom: 15px;
     }
-
     .service-card p {
       color: #94a3b8;
       font-size: 14px;
     }
-
     .example-image {
       margin-top: 20px;
       border-radius: 12px;
       overflow: hidden;
     }
-
     .example-image img {
       max-width: 100%;
       display: block;
       border-radius: 12px;
     }
-
-    /* Footer */
+    /* What We Support section */
+    .support {
+      padding: 100px 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .support h2 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, #4ade80 0%, #22c55e 50%, #22d3ee 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .support-subtitle {
+      color: #94a3b8;
+      max-width: 700px;
+      margin: 0 auto 50px auto;
+      font-size: 16px;
+    }
+    .support-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+    .support-card {
+      background: radial-gradient(circle at top left, rgba(34, 197, 94, 0.2), rgba(15, 23, 42, 0.9));
+      border-radius: 18px;
+      padding: 30px 22px;
+      border: 1px solid rgba(34, 197, 94, 0.4);
+      position: relative;
+      overflow: hidden;
+    }
+    .support-card::before {
+      content: '';
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(34, 197, 94, 0.6), transparent 60%);
+      opacity: 0.4;
+    }
+    .support-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+    }
+    .support-icon span {
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .support-card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .support-card p {
+      font-size: 14px;
+      color: #e5e7eb;
+    }
+    .badge-row {
+      margin-top: 35px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+    }
+    .donation-badge {
+      padding: 10px 22px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      color: #ecfdf5;
+      font-weight: 600;
+      font-size: 14px;
+      box-shadow: 0 10px 30px rgba(22, 163, 74, 0.4);
+    }
+    .partner-badge {
+      padding: 10px 22px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      color: #e5e7eb;
+      font-size: 13px;
+    }
     footer {
       background: linear-gradient(135deg, #0f0f1e 0%, #1a0f2e 100%);
       padding: 40px;
       text-align: center;
       border-top: 1px solid rgba(139, 92, 246, 0.2);
     }
-
     footer p {
       color: #64748b;
     }
-
     @media (max-width: 768px) {
       .hero h1 {
         font-size: 48px;
       }
-
       nav ul {
         gap: 20px;
       }
-
       nav {
         padding: 0 20px;
       }
@@ -334,15 +378,14 @@
         </div>
         Aurora
       </div>
-
       <ul>
         <li><a href="#home" data-i18n="nav.home">Home</a></li>
         <li><a href="#services" data-i18n="nav.services">Services</a></li>
+        <li><a href="#support" data-i18n="nav.support">What We Support</a></li>
         <li><a href="#examples">Examples</a></li>
         <li><a href="#testimonials">Testimonials</a></li>
         <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
       </ul>
-
       <select id="languageSwitcher">
         <option value="en">English</option>
         <option value="hi">हिन्दी</option>
@@ -354,7 +397,6 @@
   <section class="hero" id="home">
     <div class="hero-content">
       <h1 data-i18n="hero.title">Aurora</h1>
-
       <div class="animated-text">
         <span class="word" data-i18n="hero.word1">Transform</span>
         <span class="word" data-i18n="hero.word2">Your</span>
@@ -362,11 +404,9 @@
         <span class="word" data-i18n="hero.word4">Dreams</span>
         <span class="word" data-i18n="hero.word5">Today</span>
       </div>
-
       <p data-i18n="hero.subtitle">
         Stunning, lightning-fast websites tailored to your vision
       </p>
-
       <a href="#services" class="cta-button" data-i18n="hero.cta">
         Explore Services
       </a>
@@ -375,7 +415,6 @@
 
   <section class="services" id="services">
     <h2 data-i18n="services.title">What We Offer</h2>
-
     <div class="services-grid">
       <div class="service-card">
         <h3 data-i18n="services.webDesign.title">Web Design</h3>
@@ -383,40 +422,80 @@
           Beautiful, responsive designs that captivate your audience
         </p>
       </div>
-
       <div class="service-card">
         <h3 data-i18n="services.development.title">Site Management</h3>
         <p data-i18n="services.development.desc">
           Ongoing updates, content changes, and technical care for your website
         </p>
       </div>
-
       <div class="service-card">
         <h3 data-i18n="services.optimization.title">Optimization</h3>
         <p data-i18n="services.optimization.desc">
           Lightning-fast performance and SEO-ready websites
         </p>
       </div>
-
       <div class="service-card">
         <h3 data-i18n="services.animation.title">Animation</h3>
         <p data-i18n="services.animation.desc">
           Smooth, engaging animations that bring your site to life
         </p>
       </div>
-
       <div class="service-card">
         <h3 data-i18n="services.support.title">Support</h3>
         <p data-i18n="services.support.desc">
           24/7 assistance to keep your site running perfectly
         </p>
       </div>
-
       <div class="service-card">
         <h3 data-i18n="services.strategy.title">Graphic Design</h3>
         <p data-i18n="services.strategy.desc">
           Eye-catching posters and social media graphics tailored to your brand
         </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT WE SUPPORT -->
+  <section class="support" id="support">
+    <h2 data-i18n="support.title">What We Support</h2>
+    <p class="support-subtitle" data-i18n="support.subtitle">
+      Aurora is committed to supporting the United Nations Sustainable Development Goals (SDGs) and giving back to the community through trusted partners.
+    </p>
+    <div class="support-grid">
+      <div class="support-card">
+        <div class="support-icon">
+          <span>4</span>
+        </div>
+        <h3 data-i18n="support.sdg4.title">Quality Education (SDG 4)</h3>
+        <p data-i18n="support.sdg4.desc">
+          We align our work with SDG 4 by helping individuals and small businesses build a stronger digital presence, opening more learning and growth opportunities.
+        </p>
+      </div>
+      <div class="support-card">
+        <div class="support-icon">
+          <span>17</span>
+        </div>
+        <h3 data-i18n="support.sdg17.title">Partnerships for the Goals (SDG 17)</h3>
+        <p data-i18n="support.sdg17.desc">
+          By collaborating with community organisations and charities, Aurora supports SDG 17 and turns every project into a small step towards a better future.
+        </p>
+      </div>
+      <div class="support-card">
+        <div class="support-icon">
+          <span>❤</span>
+        </div>
+        <h3 data-i18n="support.lions.title">5% Donated to Lions Club</h3>
+        <p data-i18n="support.lions.desc">
+          Aurora donates 5% of revenue to Lions Club to support humanitarian, youth, and community projects around the world, so every website you build with us also helps others.
+        </p>
+      </div>
+    </div>
+    <div class="badge-row">
+      <div class="donation-badge" data-i18n="support.badge.donation">
+        5% of revenue donated to Lions Club
+      </div>
+      <div class="partner-badge" data-i18n="support.badge.sdg">
+        Connected to UN SDGs 4 & 17
       </div>
     </div>
   </section>
@@ -432,8 +511,7 @@
           </a>
         </h3>
         <p>
-          A clean, modern online store built with performance and user experience in mind.
-          Perfect for showcasing products and turning visitors into customers.
+          A clean, modern online store built with performance and user experience in mind. Perfect for showcasing products and turning visitors into customers.
         </p>
         <div class="example-image">
           <img src="image.jpg.png" alt="Screenshot of bhavika.store homepage">
@@ -449,8 +527,7 @@
       <div class="service-card">
         <h3>Sashi</h3>
         <p>
-          “Thank you so much for creating website for me, you saved me so much money
-          from other IT services, and you are always active.” – Sashi
+          “Thank you so much for creating website for me, you saved me so much money from other IT services, and you are always active.” – Sashi
         </p>
       </div>
     </div>
@@ -468,8 +545,8 @@
         "brand.name": "Aurora",
         "nav.home": "Home",
         "nav.services": "Services",
+        "nav.support": "What We Support",
         "nav.contact": "Contact",
-
         "hero.title": "Aurora",
         "hero.word1": "Transform",
         "hero.word2": "Your",
@@ -478,7 +555,6 @@
         "hero.word5": "Today",
         "hero.subtitle": "Stunning, lightning-fast websites tailored to your vision",
         "hero.cta": "Explore Services",
-
         "services.title": "What We Offer",
         "services.webDesign.title": "Web Design",
         "services.webDesign.desc": "Beautiful, responsive designs that captivate your audience",
@@ -492,16 +568,24 @@
         "services.support.desc": "24/7 assistance to keep your site running perfectly",
         "services.strategy.title": "Graphic Design",
         "services.strategy.desc": "Eye-catching posters and social media graphics tailored to your brand",
-
+        "support.title": "What We Support",
+        "support.subtitle": "Aurora is committed to supporting the United Nations Sustainable Development Goals (SDGs) and giving back to the community through trusted partners.",
+        "support.sdg4.title": "Quality Education (SDG 4)",
+        "support.sdg4.desc": "We align our work with SDG 4 by helping individuals and small businesses build a stronger digital presence, opening more learning and growth opportunities.",
+        "support.sdg17.title": "Partnerships for the Goals (SDG 17)",
+        "support.sdg17.desc": "By collaborating with community organisations and charities, Aurora supports SDG 17 and turns every project into a small step towards a better future.",
+        "support.lions.title": "5% Donated to Lions Club",
+        "support.lions.desc": "Aurora donates 5% of revenue to Lions Club to support humanitarian, youth, and community projects around the world, so every website you build with us also helps others.",
+        "support.badge.donation": "5% of revenue donated to Lions Club",
+        "support.badge.sdg": "Connected to UN SDGs 4 & 17",
         "footer.rights": "© 2025 Aurora. All rights reserved."
       },
-
       hi: {
         "brand.name": "Aurora",
         "nav.home": "होम",
         "nav.services": "सेवाएँ",
+        "nav.support": "हम क्या समर्थन करते हैं",
         "nav.contact": "संपर्क",
-
         "hero.title": "Aurora",
         "hero.word1": "बदलें",
         "hero.word2": "अपने",
@@ -510,7 +594,6 @@
         "hero.word5": "को आज",
         "hero.subtitle": "आपकी कल्पना के अनुसार तेज़ और आकर्षक वेबसाइटें",
         "hero.cta": "सेवाएँ देखें",
-
         "services.title": "हम क्या प्रदान करते हैं",
         "services.webDesign.title": "वेब डिज़ाइन",
         "services.webDesign.desc": "सुंदर और रेस्पॉन्सिव डिज़ाइन जो दर्शकों को आकर्षित करें",
@@ -524,16 +607,24 @@
         "services.support.desc": "आपकी साइट को हमेशा चालू रखने के लिए 24/7 सहायता",
         "services.strategy.title": "ग्राफिक डिज़ाइन",
         "services.strategy.desc": "आपके ब्रांड के लिए आकर्षक पोस्टर और सोशल मीडिया ग्राफ़िक्स",
-
+        "support.title": "हम क्या समर्थन करते हैं",
+        "support.subtitle": "Aurora संयुक्त राष्ट्र के सतत विकास लक्ष्यों (SDGs) का समर्थन करता है और भरोसेमंद पार्टनरों के साथ मिलकर समुदाय को वापस देने के लिए काम करता है।",
+        "support.sdg4.title": "गुणवत्तापूर्ण शिक्षा (SDG 4)",
+        "support.sdg4.desc": "हम SDG 4 के साथ जुड़ते हैं, क्योंकि हम लोगों और छोटे व्यवसायों को बेहतर डिजिटल उपस्थिति बनाने में मदद करते हैं, जिससे सीखने और विकास के अधिक अवसर खुलते हैं।",
+        "support.sdg17.title": "लक्ष्यों के लिए साझेदारी (SDG 17)",
+        "support.sdg17.desc": "समुदाय संगठनों और चैरिटी के साथ मिलकर काम करते हुए, Aurora SDG 17 को समर्थन देता है और हर प्रोजेक्ट को बेहतर भविष्य की ओर एक छोटा कदम बनाता है।",
+        "support.lions.title": "Lions Club को 5% दान",
+        "support.lions.desc": "Aurora अपनी आय का 5% Lions Club को दान करता है, जो मानवीय, युवाओं और समुदाय से जुड़े प्रोजेक्ट्स को समर्थन देता है, ताकि आपकी हर वेबसाइट किसी और की मदद भी कर सके।",
+        "support.badge.donation": "आय का 5% Lions Club को दान",
+        "support.badge.sdg": "संयुक्त राष्ट्र SDG 4 और 17 से जुड़ा",
         "footer.rights": "© 2025 Aurora. सर्वाधिकार सुरक्षित."
       },
-
       ta: {
         "brand.name": "Aurora",
         "nav.home": "முகப்பு",
         "nav.services": "சேவைகள்",
+        "nav.support": "நாங்கள் ஆதரிப்பவை",
         "nav.contact": "தொடர்பு",
-
         "hero.title": "Aurora",
         "hero.word1": "மாற்றுங்கள்",
         "hero.word2": "உங்கள்",
@@ -542,7 +633,6 @@
         "hero.word5": "இன்று",
         "hero.subtitle": "உங்கள் கற்பனைக்கேற்ப வேகமான, அழகான வலைத்தளங்கள்",
         "hero.cta": "சேவைகளை பார்க்க",
-
         "services.title": "எங்கள் சேவைகள்",
         "services.webDesign.title": "வலை வடிவமைப்பு",
         "services.webDesign.desc": "உங்கள் பார்வையாளர்களை ஈர்க்கும் அழகான, பதிலளிக்கும் வடிவமைப்புகள்",
@@ -556,7 +646,16 @@
         "services.support.desc": "உங்கள் தளம் நன்றாக இயங்க 24/7 ஆதரவு",
         "services.strategy.title": "கிராஃபிக் டிசைன்",
         "services.strategy.desc": "உங்கள் பிராண்டிற்கு கவர்ச்சிகரமான போஸ்டர்கள் மற்றும் சமூக ஊடக கிராஃபிக்ஸ்",
-
+        "support.title": "நாங்கள் ஆதரிப்பவை",
+        "support.subtitle": "Aurora, ஐக்கிய நாடுகள் சபையின் நிலையான வளர்ச்சி இலக்குகளை (SDGs) ஆதரிக்கிறது மற்றும் சமூகத்திற்கு உதவ நம்பகமான பங்குதாரர்களுடன் இணைந்து செயல்படுகிறது.",
+        "support.sdg4.title": "தரமான கல்வி (SDG 4)",
+        "support.sdg4.desc": "மக்கள் மற்றும் சிறு நிறுவனங்கள் வலுவான டிஜிட்டல் இருப்பை உருவாக்க உதவுவதன் மூலம், Aurora SDG 4 இலக்கை ஆதரிக்கிறது மற்றும் மேலும் கற்றல் வாய்ப்புகளை உருவாக்குகிறது.",
+        "support.sdg17.title": "இலக்குகளுக்கான கூட்டாண்மை (SDG 17)",
+        "support.sdg17.desc": "சமூக அமைப்புகள் மற்றும் அறக்கட்டளைகளுடன் இணைந்து பணிபுரிவதன் மூலம், Aurora SDG 17 இலக்கத்தை முன்னேற்றுகிறது மற்றும் ஒவ்வொரு திட்டத்தையும் நல்ல எதிர்காலத்திற்கான ஒரு சிறிய முன்னேற்றமாக மாற்றுகிறது.",
+        "support.lions.title": "Lions Club க்கு 5% நன்கொடை",
+        "support.lions.desc": "Aurora தனது வருமானத்தின் 5% ஐ Lions Club க்கு நன்கொடையாக வழங்குகிறது, இது மனிதாபிமான, இளைஞர் மற்றும் சமூக திட்டங்களை ஆதரிக்கிறது; அதனால், நீங்கள் உருவாக்கும் ஒவ்வொரு வலைத்தளமும் மற்றவர்களுக்கு உதவுகிறது.",
+        "support.badge.donation": "வருமானத்தின் 5% Lions Club க்கு நன்கொடை",
+        "support.badge.sdg": "ஐ.நா. SDG 4 மற்றும் 17 உடன் இணைப்பு",
         "footer.rights": "© 2025 Aurora. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை."
       }
     };
