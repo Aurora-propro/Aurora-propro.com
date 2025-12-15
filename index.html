@@ -214,36 +214,18 @@
     }
 
     @keyframes slideInDown {
-      from {
-        opacity: 0;
-        transform: translateY(-30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes slideInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes float {
@@ -296,6 +278,18 @@
     .service-card p {
       color: #94a3b8;
       font-size: 14px;
+    }
+
+    .example-image {
+      margin-top: 20px;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .example-image img {
+      max-width: 100%;
+      display: block;
+      border-radius: 12px;
     }
 
     /* Footer */
@@ -432,11 +426,18 @@
     <h2>Example Project</h2>
     <div class="services-grid">
       <div class="service-card">
-        <h3>bhavika.store</h3>
+        <h3>
+          <a href="https://bhavika.store" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">
+            bhavika.store
+          </a>
+        </h3>
         <p>
           A clean, modern online store built with performance and user experience in mind.
           Perfect for showcasing products and turning visitors into customers.
         </p>
+        <div class="example-image">
+          <img src="image.jpg" alt="Screenshot of bhavika.store homepage">
+        </div>
       </div>
     </div>
   </section>
